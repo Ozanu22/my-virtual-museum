@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #5a2e1d; /* Dark brown, reminiscent of ancient wood/earth */
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.artifact-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 320px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.artifact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.artifact-card img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for consistent card layout */
+    object-fit: contain; /* Ensures the entire image is visible */
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.artifact-card h2 {
+    font-size: 1.7em;
+    margin-top: 0;
+    color: #a0522d; /* Sienna, a rich earthy tone */
+    margin-bottom: 10px;
+}
+
+.artifact-card p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    text-align: left; /* Align text left within the card */
+}
+
+.artifact-card p strong {
+    color: #5a2e1d; /* Matching header color for emphasis */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+#loading-message {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+        gap: 20px;
+    }
+    .artifact-card {
+        width: 90%; /* Make cards take more width on smaller screens */
+    }
+    header h1 {
+        font-size: 2em;
+    }
+}
